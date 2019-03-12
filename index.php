@@ -24,5 +24,6 @@ class Task{
 $tasks = [new Task('Do homework'),
         new Task('Watch courses')];
 
+var_dump($tasks[0]->isCompleted());
 
 require 'index.view.php';
