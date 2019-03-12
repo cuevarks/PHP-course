@@ -1,6 +1,8 @@
 <?php
 
-class Task{
+require 'Task.php';
+
+class Task {
 
     public $description;
     public $completed = false;
@@ -21,9 +23,12 @@ class Task{
 
 }
 
+
+
 $tasks = [new Task('Do homework'),
         new Task('Watch courses')];
 
 var_dump($tasks[0]->isCompleted());
 
+Connection::make();
 require 'index.view.php';
