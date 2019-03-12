@@ -1,34 +1,12 @@
 <?php
 
+require 'functions.php';
+require 'database/Connection.php';
 require 'Task.php';
 
-class Task {
+$pdo = Connection::make();
 
-    public $description;
-    public $completed = false;
-
-    public function __construct($description)
-    {
-        $this->description = $description;
-    }
-
-    public function complete() {
-        $this->completed = true;
-    }
-
-    public function isCompleted()
-    {
-        return $this->completed;
-    }
-
-}
-
-
-
-$tasks = [new Task('Do homework'),
-        new Task('Watch courses')];
+$tasks = fetchAllTasks($pdo);
 
 var_dump($tasks[0]->isCompleted());
-
-Connection::make();
 require 'index.view.php';
