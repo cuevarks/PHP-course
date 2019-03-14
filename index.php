@@ -8,5 +8,6 @@ $pdo = Connection::make();
 
 $tasks = fetchAllTasks($pdo);
 
-var_dump($tasks[0]->isCompleted());
+var_dump($tasks);
+
 require 'index.view.php';
