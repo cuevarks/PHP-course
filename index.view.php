@@ -6,32 +6,25 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <style>
-        header {
-            background: gray;
-            padding: 2em;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style/index.css" media="screen" type="text/css">
 
 
 </head>
 <body>
 
-<header>
-       <h1> Testing </h1>
-</header>
+<div id="myDIV" class="header">
+    <h2>v1.0</h2>
+    <input type="text" id="myInput" placeholder="Title">
+    <span onclick="newElement()" class="addBtn">New</span>
+</div>
 
-    <ul>
+    <ul id="myUL">
         <?php foreach ($tasks as $task) : ?>
-            <li>
                 <?php if ($task->completed) : ?>
-                    <strike> <?= $task->description; ?> </strike>
+                    <li class="checked"> <?= $task->description; ?> </li>
                 <?php else: ?>
-                    <?= $task->description; ?>
+                    <li><?= $task->description; ?></li>
                 <?php endif; ?>
-            </li>
         <?php endforeach; ?>
     </ul>
 
