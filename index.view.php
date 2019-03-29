@@ -7,26 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style/index.css" media="screen" type="text/css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 </head>
 <body>
 
 <div id="myDIV" class="header">
-    <h2>v1.0</h2>
+<!--    <h2 class="logo"><img src="images/checked.svg" alt="Checkmark icon"></h2>-->
+    <h2>To do</h2>
     <input type="text" id="myInput" placeholder="Title">
     <span onclick="newElement()" class="addBtn">New</span>
 </div>
 
-    <ul id="myUL">
-        <?php foreach ($tasks as $task) : ?>
-                <?php if ($task->completed) : ?>
-                    <li class="checked"> <?= $task->description; ?> </li>
-                <?php else: ?>
-                    <li><?= $task->description; ?></li>
-                <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
+<ul id="myUL">
+    <?php foreach ($tasks as $task) : ?>
+        <?php if ($task->completed) : ?>
+            <li class="checked"> <?= $task->description; ?> </li>
+        <?php else: ?>
+            <li><?= $task->description; ?></li>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</ul>
 
 </body>
 </html>
