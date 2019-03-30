@@ -14,7 +14,6 @@
 
 <div id="myDIV" class="header">
     <h2 class="logo"><img src="images/checked.svg" alt="Logo"></h2>
-<!--    <h2>To do</h2>-->
     <input type="text" id="myInput" placeholder="Title">
     <span onclick="newElement()" class="addBtn">New</span>
 </div>

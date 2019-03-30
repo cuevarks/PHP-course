@@ -71,18 +71,15 @@ ul li.checked::before {
 }
 
 .logo {
-    max-width: 8px;
-
+    height: 5rem;
+    width: 250px;
+    display: block;
 }
 
 /* Style the header */
 .header {
     background-color: #2b9a12;
-    padding: 15px 20px;
-    color: white;
-    text-align: center;
-    font-family: Oswald;
-    font-size: 2em;
+    padding: 15px 30px;
 }
 
 /* Clear floats after the header */
@@ -105,7 +102,7 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
-    padding: 10px;
+    padding: 13px;
     width: 25%;
     background: #bebebe;
     color: #555;
