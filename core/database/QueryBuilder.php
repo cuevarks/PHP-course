@@ -5,6 +5,7 @@
  * Date: 2019-03-14
  * Time: 10:47
  */
+
 class QueryBuilder
 {
     protected $pdo;
@@ -19,12 +20,13 @@ class QueryBuilder
         $statement = $this->pdo->prepare("SELECT * FROM {$table}");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, $class);
-
     }
 
-    public function insertVaLue($table, $value)
+    public function insertValue($table, $value)
     {
-        $statement = $this->pdo->prepare("INSERT INTO {$table} (description, completed) VALUES ({$value}, FALSE");
+        $statement = $this->pdo->prepare("INSERT INTO {$table} (description, completed) VALUES (:task, FALSE )");
+        $task_title = $value;
+        $statement->bindParam(':task', $task_title);
         $statement->execute();
     }
 
