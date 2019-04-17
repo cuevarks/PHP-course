@@ -8,11 +8,11 @@
 
 if (isset($_POST['submit'])) {
 
-    $query = require 'bootstrap.php';
+    $query = require 'core/bootstrap.php';
     $task = $_POST['myInput'];
     $query->insertValue('todos', $task);
 //    echo 'Success!';
-    echo"<script language='javascript'>
+    echo "<script language='javascript'>
           window.location = 'index.php'
 </script>";
 }
