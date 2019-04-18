@@ -16,3 +16,14 @@ if (isset($_POST['submit'])) {
           window.location = 'index.php'
 </script>";
 }
+
+elseif ($_POST['delete']) {
+    $query = require 'core/bootstrap.php';
+    $id = $_POST['id'];
+    var_dump($id);
+    die();
+    $query->delete_id('todos', $id);
+    echo "<script language='javascript'>
+          window.location = 'index.php'
+</script>";
+}

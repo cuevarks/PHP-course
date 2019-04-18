@@ -80,15 +80,16 @@ ul li.checked::before {
     top: 0;
     cursor: pointer;
 }
-
+.title {
+    display: flex;
+    align-items: center;
+    top: 50%;
+    justify-content: space-between;
+    width: 600px;
+}
 .logo {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    /*height: 8rem;*/
+    margin-left: 50%;
     width: 300px;
-    display: block;
 }
 
 .nani {
