@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
     $query = require 'core/bootstrap.php';
     $task = $_POST['myInput'];
     $query->insertValue('todos', $task);
-//    echo 'Success!';
     echo "<script language='javascript'>
           window.location = 'index.php'
 </script>";
@@ -19,7 +18,7 @@ if (isset($_POST['submit'])) {
 
 elseif ($_POST['delete']) {
     $query = require 'core/bootstrap.php';
-    $id = $_POST['id'];
+    $id = $_POST['delete'];
     var_dump($id);
     die();
     $query->delete_id('todos', $id);

@@ -1,8 +1,8 @@
 function deletion(option)
 {
     var list = document.getElementsByTagName("li");
-    if (option == 'delete') {
-        console.log(list)
+    if (option === 'delete') {
+        console.log(list);
         document.delete.submit();
     }
 }
