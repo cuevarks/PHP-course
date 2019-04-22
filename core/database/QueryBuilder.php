@@ -30,10 +30,15 @@ class QueryBuilder
         $statement->execute();
     }
 
-
     public function delete_id($table, $id)
     {
         $statement = $this->pdo->prepare("DELETE FROM {$table} WHERE id={$id}");
+        $statement->execute();
+    }
+
+    public function check_id($table, $id)
+    {
+        $statement = $this->pdo->prepare("UPDATE {$table} SET completed = TRUE WHERE id = {$id}");
         $statement->execute();
     }
 }

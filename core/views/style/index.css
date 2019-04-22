@@ -62,20 +62,34 @@ ul li.checked::before {
     width: 7px;
 }
 
+.checkBtn {
+    display: flex;
+    align-items: flex-start;
+    font-family: Oswald;
+    font-size: 18px;
+    height: 52px;
+    width: 1322px;
+    -webkit-appearance: none;
+    padding: 12px 8px 12px 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* Style the close button */
 .deleteBtn {
     background: none;
-    border: none;
     width: 20px;
     height: 40px;
     cursor: pointer;
 }
 
 .close {
+    align-items: center;
     background: none;
     border: none;
     color: #000000;
-    position: relative;
+    position: absolute;
     right: 0;
     top: 0;
     cursor: pointer;

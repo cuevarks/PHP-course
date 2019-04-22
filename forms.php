@@ -17,11 +17,23 @@ if (isset($_POST['submit'])) {
 }
 
 elseif ($_POST['delete']) {
+    echo 'delete';
+    var_dump($_POST);
+    die();
     $query = require 'core/bootstrap.php';
     $id = $_POST['delete'];
-    var_dump($id);
-    die();
     $query->delete_id('todos', $id);
+    echo "<script language='javascript'>
+          window.location = 'index.php'
+</script>";
+}
+elseif ($_POST['check']) {
+    echo 'check';
+    var_dump($_POST);
+    die();
+    $query = require 'core/bootstrap.php';
+    $id = $_POST['check'];
+    $query->check_id('todos', $id);
     echo "<script language='javascript'>
           window.location = 'index.php'
 </script>";

@@ -1,9 +1,15 @@
-function deletion(option)
+function actions(option)
 {
     var list = document.getElementsByTagName("li");
+
     if (option === 'delete') {
-        console.log(list);
+        console.log('nani2');
+
         document.delete.submit();
+    }
+    else if (option === 'check') {
+        console.log('nani');
+        document.check.submit();
     }
 }
 
