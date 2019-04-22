@@ -16,7 +16,7 @@ ul li {
     align-items: center;
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 12px 30px 12px 30px;
     background: #eee;
     font-family: Oswald;
     font-size: 18px;
@@ -64,13 +64,9 @@ ul li.checked::before {
 
 .checkBtn {
     display: flex;
-    align-items: flex-start;
     font-family: Oswald;
     font-size: 18px;
-    height: 52px;
-    width: 1322px;
     -webkit-appearance: none;
-    padding: 12px 8px 12px 40px;
     background: none;
     border: none;
     cursor: pointer;
@@ -89,7 +85,7 @@ ul li.checked::before {
     background: none;
     border: none;
     color: #000000;
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
     cursor: pointer;

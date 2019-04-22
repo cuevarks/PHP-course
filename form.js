@@ -1,15 +1,28 @@
-function actions(option)
+function actions(option, idElement)
 {
     var list = document.getElementsByTagName("li");
+    var requestDB = new XMLHttpRequest();
+    var data =
 
     if (option === 'delete') {
-        console.log('nani2');
-
-        document.delete.submit();
+        requestDB.open("POST", 'forms.php', true);
+        requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        requestDB.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+            }
+        };
+        requestDB.send();
     }
     else if (option === 'check') {
-        console.log('nani');
-        document.check.submit();
+        requestDB.open("POST", 'forms.php', true);
+        requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        requestDB.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+            }
+        };
+        requestDB.send();
     }
 }
 
