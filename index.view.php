@@ -20,12 +20,12 @@
 
     <h2 class="title"><img src="core/views/images/checked.png" alt="Logo" class="logo"></h2>
 
-    <form action="forms.php" method="post">
+<!--    <form action="forms.php" method="post">-->
 
         <input type="text" name="myInput" placeholder="Task">
         <input type="submit" name="submit" value="New" class="addBtn">
 
-    </form>
+<!--    </form>-->
 
 </div>
 
