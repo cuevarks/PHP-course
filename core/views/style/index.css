@@ -13,10 +13,10 @@ ul {
 ul li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
     cursor: pointer;
     position: relative;
-    padding: 12px 30px 12px 30px;
+    padding: 0px;
     background: #eee;
     font-family: Oswald;
     font-size: 18px;
@@ -49,7 +49,7 @@ ul li.checked {
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     content: '';
     position: absolute;
     border-color: #fff;
@@ -70,6 +70,9 @@ ul li.checked::before {
     background: none;
     border: none;
     cursor: pointer;
+    height: 52px;
+    width: 1506px;
+    padding-left: 2%;
 }
 
 /* Style the close button */
@@ -89,16 +92,17 @@ ul li.checked::before {
     right: 0;
     top: 0;
     cursor: pointer;
+    padding-right: 1%;
 }
 .title {
     display: flex;
     align-items: center;
-    top: 50%;
-    justify-content: space-between;
+    justify-content: center;
     width: 600px;
 }
+
 .logo {
-    margin-left: 50%;
+    padding-bottom: 5%;
     width: 300px;
 }
 
@@ -113,7 +117,7 @@ ul li.checked::before {
  }
 /* Style the header */
 .header {
-    background-color: #2b9a12;
+    background-color: #3f6c2f;
     padding: 15px 30px;
 }
 
@@ -138,8 +142,8 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
-    padding: 13px;
     width: 25%;
+    height: 50px;
     background: #bebebe;
     color: #555;
     float: left;
@@ -149,6 +153,8 @@ input {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
+    border: none;
+    padding: 0px;
 }
 
 .addBtn:hover {

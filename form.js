@@ -1,21 +1,16 @@
 function actions(option, idElement)
 {
-    let requestDB = new XMLHttpRequest();
-    var id = encodeURIComponent(idElement);
-    var li = document.getElementById(idElement);
-    console.log(li);
+    const requestDB = new XMLHttpRequest();
+    const id = encodeURIComponent(idElement);
+    const li = document.getElementById(idElement);
 
     if (option === 'delete') {
         requestDB.open("POST", 'forms.php', true);
         requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        requestDB.onreadystatechange = function() {
-            if (requestDB.readyState == 4 && requestDB.status == 200) {
-                li.style.display = 'none';
-            }
-        };
+        li.style.display = 'none';
         requestDB.send('delete='+ id);
     }
+
     else if (option === 'check') {
         requestDB.open("POST", 'forms.php', true);
         requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -24,8 +19,17 @@ function actions(option, idElement)
                 console.log(this.responseText);
             }
         };
-        requestDB.send();
+        requestDB.send('check='+ id);
+        //window.location.reload();
     }
 }
 
-// OK idea: take the form documnent submit js and connect it with the php form for deleting
+function addItem() {
+    let requestDB = new XMLHttpRequest();
+    requestDB.open("POST", 'forms.php', true);
+    requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    let taskDescription = document.getElementById('myInput').value;
+    requestDB.send('myInput='+ taskDescription);
+    window.location.reload();
+
+}
