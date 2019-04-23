@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="af0df556-02fb-4a92-abd9-f0f00097edf0">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+      <introspection-schemas>*:@,mytodo</introspection-schemas>
+    </data-source>
+  </component>
+</project>
