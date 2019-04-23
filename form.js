@@ -19,6 +19,7 @@ function actions(option, idElement)
                 console.log(this.responseText);
             }
         };
+        document.getElementById(id).className = 'checked';
         requestDB.send('check='+ id);
         //window.location.reload();
     }
