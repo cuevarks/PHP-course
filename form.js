@@ -14,14 +14,8 @@ function actions(option, idElement)
     else if (option === 'check') {
         requestDB.open("POST", 'forms.php', true);
         requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        requestDB.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                console.log(this.responseText);
-            }
-        };
         document.getElementById(id).className = 'checked';
         requestDB.send('check='+ id);
-        //window.location.reload();
     }
 }
 

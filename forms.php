@@ -10,11 +10,6 @@ if (isset($_POST['myInput'])) {
     $query = require 'core/bootstrap.php';
     $task = $_POST['myInput'];
     $query->insertValue('todos', $task);
-    echo $task;
-    die();
-//    echo "<script language='javascript'>
-//          window.location = 'index.php'
-//</script>";
 }
 
 elseif ($_POST['delete']) {
