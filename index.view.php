@@ -15,8 +15,8 @@
 
 </head>
 
-<body style="margin: 0">
-
+<body>
+<div>
 <div id="myDIV" class="header">
 
     <h2 class="title"><img src="core/views/images/checked.png" alt="Logo" class="logo"></h2>
@@ -29,7 +29,7 @@
 
     <?php foreach ($tasks as $task) : ?>
         <?php if ($task->completed) : ?>
-            <li class="checked">
+            <li class="checked" id="<?php echo $task->id;?>">
             <?= $task->description; ?>
         <?php else: ?>
             <li id="<?php echo $task->id;?>">
@@ -45,6 +45,6 @@
     <?php endforeach; ?>
 
 </ul>
-
+</div>
 </body>
 </html>

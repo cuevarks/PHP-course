@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
 
 ul {
     margin: 0;
@@ -35,7 +38,8 @@ ul li:hover {
 ul li.checked {
     display: flex;
     align-items: center;
-    background: #888;
+    padding-left: 5%;
+    background: #888; /* Lighter gray*/
     color: #fff;
     text-decoration: line-through;
     -webkit-user-select: none;
