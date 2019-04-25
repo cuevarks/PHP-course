@@ -41,4 +41,10 @@ class QueryBuilder
         $statement = $this->pdo->prepare("UPDATE {$table} SET completed = TRUE WHERE id = {$id}");
         $statement->execute();
     }
+
+    public function uncheck_id($table, $id)
+    {
+        $statement = $this->pdo->prepare("UPDATE {$table} SET completed = FALSE WHERE id = {$id}");
+        $statement->execute();
+    }
 }

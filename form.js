@@ -17,6 +17,13 @@ function actions(option, idElement)
         document.getElementById(id).className = 'checked';
         requestDB.send('check='+ id);
     }
+
+    else {
+        requestDB.open("POST", 'forms.php', true);
+        requestDB.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        document.getElementById(id).classList.toggle('checked');
+        requestDB.send('uncheck='+ id);
+    }
 }
 
 function addItem() {

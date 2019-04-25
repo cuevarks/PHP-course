@@ -25,3 +25,10 @@ elseif ($_POST['check']) {
     $id = $_POST['check'];
     $query->check_id('todos', $id);
 }
+
+elseif ($_POST['uncheck']) {
+
+    $query = require 'core/bootstrap.php';
+    $id = $_POST['uncheck'];
+    $query->uncheck_id('todos', $id);
+}
