@@ -12,6 +12,7 @@
     <link rel="icon" href="core/views/images/notepad.png" type="image/x-icon"/>
     <link rel="stylesheet" href="core/views/style/index.css" media="screen" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
 
 </head>
 
@@ -19,10 +20,14 @@
 <div class="background">
 <div id="myDIV" class="header">
 
-    <h2 class="title"><img src="core/views/images/checked.png" alt="Logo" class="logo"></h2>
+    <h2 class="title">
+        <img src="core/views/images/checked.png" alt="Logo" class="logo">
+    </h2>
+    <h3 class="subtitle">create your list :'v</h3>
+    <div class="searchBar">
         <input type="text" name="myInput" id="myInput" placeholder="Task">
         <button onclick='addItem()' class="addBtn">New</button>
-
+    </div>
 </div>
 
 <ul id="myUL">
@@ -31,11 +36,13 @@
 
         <?php if ($task->completed) : ?>
             <li class="checked" id="<?php echo $task->id;?>">
-            <?= $task->description; ?>
+            <button onclick="actions('check', '<?php echo $task->id;?>')" class="checkBtn">
+                <span id="list-text"><?= $task->description; ?></span>
+            </button>
         <?php else: ?>
             <li id="<?php echo $task->id;?>">
                 <button onclick="actions('check', '<?php echo $task->id;?>')" class="checkBtn">
-                    <?= $task->description; ?>
+                    <span id="list-text"><?= $task->description; ?></span>
                 </button>
         <?php endif; ?>
                 <button onclick="actions('delete', '<?php echo $task->id;?>')" class="close">

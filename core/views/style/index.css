@@ -31,6 +31,7 @@ html, body {
 ul {
     margin: 0;
     padding: 0;
+    padding-top: 1%;
 }
 
 ul li {
@@ -43,10 +44,15 @@ ul li {
     font-family: Oswald;
     font-size: 18px;
     transition: 0.2s;
+    margin: 0 16%;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#list-text {
+    opacity: 1.0;
 }
 
 ul li:nth-child(odd) {
@@ -60,7 +66,7 @@ ul li:hover {
 ul li.checked {
     display: flex;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 1%;
     background: #888; /* Lighter gray*/
     color: #fff;
     text-decoration: line-through;
@@ -120,10 +126,21 @@ ul li.checked::before {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: -10px;
+}
+
+.subtitle {
+    display: flex;
+    margin-top: 0;
+    margin-left: 135px;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
 }
 
 .logo {
-    padding-bottom: 5%;
+    display: block;
     width: 300px;
 }
 
@@ -139,7 +156,7 @@ ul li.checked::before {
 
 .header {
     background-color: #3CB371;
-    height: 80%;
+    height: 300px;
     padding: 15px 30px 15px 30px;
     opacity: 0.90;
 }
@@ -151,11 +168,16 @@ ul li.checked::before {
     clear: both;
 }
 
+.searchBar {
+    display: flex;
+    justify-content: center;
+}
+
 input {
     margin: 0;
     border: none;
     border-radius: 0;
-    width: 75%;
+    width: 55%;
     padding: 16px;
     float: left;
     font-size: 16px;
@@ -163,7 +185,7 @@ input {
 }
 
 .addBtn {
-    width: 25%;
+    width: 15%;
     height: 50px;
     background: #bebebe;
     color: #555;
