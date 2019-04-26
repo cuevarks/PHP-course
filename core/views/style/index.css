@@ -67,7 +67,7 @@ ul li.checked {
     display: flex;
     align-items: center;
     padding-left: 1%;
-    background: #888; /* Lighter gray*/
+    background: #3cb371a1; /* Lighter gray*/
     color: #fff;
     text-decoration: line-through;
     -webkit-user-select: none;
