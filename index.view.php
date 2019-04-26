@@ -26,7 +26,7 @@
         <h3 class="subtitle">create your list :'v</h3>
         <div class="searchBar">
             <input type="text" name="myInput" id="myInput" placeholder="Task">
-            <button onclick='addItem()' class="addBtn">New</button>
+            <button onclick="addItem()" class="addBtn">New</button>
         </div>
     </div>
 
